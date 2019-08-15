@@ -1,0 +1,17 @@
+title: 'Blog de madeleine'
+default_lang: fr
+author:
+  name: Madeleine
+  email: madeleine.f@live.fr
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Blog qui permet de raconter mes journées avec la fibromyalgie'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

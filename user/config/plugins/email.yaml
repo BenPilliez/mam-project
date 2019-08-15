@@ -1,0 +1,23 @@
+enabled: true
+from: madeleine.f@live.fr
+from_name: Madeleine
+to: madeleine.f@live.fr
+to_name: Madeleine
+queue:
+  enabled: false
+  flush_frequency: '* * * * *'
+  flush_msg_limit: 10
+  flush_time_limit: 100
+mailer:
+  engine: smtp
+  smtp:
+    server: smtp.sendgrid.net
+    port: 587
+    encryption: tls
+    user: apikey
+    password: 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
+    username: apikey
+  sendmail:
+    bin: '/usr/sbin/sendmail -bs'
+content_type: text/html
+debug: false

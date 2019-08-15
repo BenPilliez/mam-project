@@ -1,0 +1,12 @@
+enabled: true
+copyright: 'Copyright &copy; Your Website 2016'
+favicon: favicon.png
+error_header_image: home-bg.jpg
+JSComments :  jscomments()|raw
+social_icons:
+  -
+    icon: fa-twitter
+    url: 'https://twitter.com/Faihy3'
+  -
+    icon: fa-facebook
+    url: 'https://www.facebook.com/madeleine.faihy.7'
