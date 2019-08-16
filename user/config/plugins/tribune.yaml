@@ -1,9 +1,9 @@
-enabled: true
-page: /tribune # Page where tribune will be visible, YOU HAVE TO CREATE THIS PAGE FOR IT TO BE VISIBLE IN MENUS/COLLECTIONS/...
-style: true # Use default CSS to style the tribune
-timezone: Europe/Paris # Timezone for message timestamps (aka norloges)
-maxPosts: 200 # History size
-maxMessageLength: 1024 # Message size limit
-maxLoginLength: 32 # Message's login size limit
-maxInfoLength: 64 # Message's additionnal info size limit
-maxLineLength: 2048 # Internal parameter that MUST be greater than sum of *Length options
+enabled: false
+page: /tribune
+style: true
+timezone: Europe/Paris
+maxPosts: 200
+maxMessageLength: 1024
+maxLoginLength: 32
+maxInfoLength: 64
+maxLineLength: 2048

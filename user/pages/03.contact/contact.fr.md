@@ -1,9 +1,8 @@
 ---
-title: Me contacter
-menu: Me contacter
-subheading: Vous avez des questions ? (Je vais tenter d'y répondre).
+title: 'Me contacter'
+subheading: 'Vous avez des questions ? (Je vais tenter d''y répondre).'
 header_image: contact-bg.jpg
-
+menu: 'Me contacter'
 form:
     name: contact-form
     message_color: danger
@@ -26,8 +25,8 @@ form:
             classes: form-control
         -
             name: objet
-            label: objet de la demande
-            placeholder: Objet de l'email
+            label: 'objet de la demande'
+            placeholder: 'Objet de l''email'
             type: text
             validate:
                 required: true
@@ -46,7 +45,7 @@ form:
             classes: recaptcha
             label: false
             type: captcha
-            recaptcha_site_key: 
+            recaptcha_site_key: null
             recaptcha_not_validated: 'Captcha not valid!'
             validate:
                 required: true
@@ -54,24 +53,28 @@ form:
         -
             type: submit
             value: Envoyer
-            classes: btn btn-default
+            classes: 'btn btn-default'
     process:
-        - captcha: true
-        - email:
-            from: "{{ form.value.email|e }}"
-            from_name: "{{ form.value.name }}"
-            to:
-                -
-                    "{{ config.plugins.email.to }}"
-            subject: "[Contact site] {{ form.value.objet|e }}"
-            body: "{{ form.value.message }}"
-        - save:
-            fileprefix: contact-
-            dateformat: Ymd-His-u
-            extension: txt
-            body: "{% include 'forms/data.txt.twig' %}"
-        - message: Merci de m'avoir contacté. 
-        - reset: true
+        -
+            captcha: true
+        -
+            email:
+                from: '{{ form.value.email|e }}'
+                from_name: '{{ form.value.name }}'
+                to:
+                    - '{{ config.plugins.email.to }}'
+                subject: '[Contact site] {{ form.value.objet|e }}'
+                body: '{{ form.value.message }}'
+        -
+            save:
+                fileprefix: contact-
+                dateformat: Ymd-His-u
+                extension: txt
+                body: '{% include ''forms/data.txt.twig'' %}'
+        -
+            message: 'Merci de m''avoir contacté.'
+        -
+            reset: true
 ---
 
 Vous voulez me contacter ? Remplissez le formulaire ci dessous et je vous réponderais dans un délai de 48 heures maximum !
