@@ -27,7 +27,7 @@ if ($grav_basedir = getenv('GRAV_BASEDIR') ?: '') {
 }
 
 $_SERVER = array_merge($_SERVER, $_ENV);
-$_SERVER['SCRIPT_FILENAME'] = $_SERVER['DOCUMENT_ROOT'] . $grav_basedir .DIRECTORY_SEPARATOR . 'index.php';
+$_SERVER['SCRIPT_FILENAME'] = $_SERVER['DOCUMENT_ROOT'] . $grav_basedir . DIRECTORY_SEPARATOR . 'index.php';
 $_SERVER['SCRIPT_NAME'] = $grav_basedir . DIRECTORY_SEPARATOR . 'index.php';
 $_SERVER['PHP_SELF'] = $grav_basedir . DIRECTORY_SEPARATOR . 'index.php';
 
