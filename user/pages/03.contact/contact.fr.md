@@ -3,6 +3,21 @@ title: 'Me contacter'
 subheading: 'Vous avez des questions ? (Je vais tenter d''y répondre).'
 header_image: contact-bg.jpg
 menu: 'Me contacter'
+googletitle: 'Me contacter'
+googledesc: 'Formulaire de contact, si vous avez des questions sur la fibromyalgie'
+twittercardoptions: summary
+articleenabled: false
+musiceventenabled: false
+orgaenabled: false
+orga:
+    ratingValue: 2.5
+orgaratingenabled: false
+eventenabled: false
+personenabled: false
+restaurantenabled: false
+restaurant:
+    acceptsReservations: 'yes'
+    priceRange: $
 form:
     name: contact-form
     message_color: danger
