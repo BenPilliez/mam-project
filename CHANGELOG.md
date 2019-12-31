@@ -1,5 +1,68 @@
+# v1.6.19
+## 12/04/2019
+
+1. [](#new)
+    * Catch PHP 7.4 deprecation messages and report them in debugbar instead of throwing fatal error
+1. [](#bugfix)
+    * Fixed fatal error when calling `{{ grav.undefined }}`
+    * Fixed multiple issues when there are no pages in the site
+    *  PHP 7.4 fix for [#2750](https://github.com/getgrav/grav/issues/2750)
+
+# v1.6.18
+## 12/02/2019
+
+1. [](#bugfix)
+    * PHP 7.4 fix in `Pages::buildSort()`
+    * Updated vendor libraries for PHP 7.4 fixes in Twig and other libraries
+    * Fixed fatal error when `$page->id()` is null [#2731](https://github.com/getgrav/grav/pull/2731)
+    * Fixed cache conflicts on pages with no set id
+    * Fix rewrite rule for for `lighttpd` default config [#721](https://github.com/getgrav/grav/pull/2721)
+
+# v1.6.17
+## 11/06/2019
+
+1. [](#new)
+    * Added working ETag (304 Not Modified) support based on the final rendered HTML
+1. [](#improved)
+    * Safer file handling + customizable null char replacement in `CsvFormatter::decode()`
+    * Change of Behavior: `Inflector::hyphenize` will now automatically trim dashes at beginning and end of a string.
+    * Change in Behavior for `Folder::all()` so no longer fails if trying to copy non-existent dot file [#2581](https://github.com/getgrav/grav/pull/2581)
+    * renamed composer `test-plugins` script to `phpstan-plugins` to be more explicit [#2637](https://github.com/getgrav/grav/pull/2637)
+1. [](#bugfix)
+    * Fixed PHP 7.1 bug in FlexMedia
+    * Fix cache image generation when using cropResize [#2639](https://github.com/getgrav/grav/pull/2639)
+    * Fix `array_merge()` exception with non-array page header metadata [#2701](https://github.com/getgrav/grav/pull/2701)
+
+# v1.6.16
+## 09/19/2019
+
+1. [](#bugfix)
+    * Fixed Flex user creation if file storage is being used [#2444](https://github.com/getgrav/grav/issues/2444)
+    * Fixed `Badly encoded JSON data` warning when uploading files [#2663](https://github.com/getgrav/grav/issues/2663)
+
+# v1.6.15
+## 08/20/2019
+
+1. [](#improved)
+    * Improved robots.txt [#2632](https://github.com/getgrav/grav/issues/2632)
+1. [](#bugfix)
+    * Fixed broken markdown Twig tag [#2635](https://github.com/getgrav/grav/issues/2635)
+    * Force Symfony 4.2 in Grav 1.6 to remove a bunch of deprecated messages
+
+# v1.6.14
+## 08/18/2019
+
+1. [](#bugfix)
+    * Actually include fix for `system\router.php` [#2627](https://github.com/getgrav/grav/issues/2627)
+
+# v1.6.13
+## 08/16/2019
+
+1. [](#bugfix)
+    * Regression fix for `system\router.php` [#2627](https://github.com/getgrav/grav/issues/2627)
+
 # v1.6.12
-## 08/11/2019
+## 08/14/2019
 
 1. [](#new)
     * Added support for custom `FormFlash` save locations
@@ -7,7 +70,7 @@
     * Support new GRAV_BASEDIR environment variable [#2541](https://github.com/getgrav/grav/pull/2541)
     * Allow users to override plugin handler priorities [#2165](https://github.com/getgrav/grav/pull/2165)
 1. [](#improved)
-    * Use new `Utils::getSupportedPageTypes()` to enforce `html,htm` at the front of the list [#2531](https://github.com/getgrav/grav/issues/2531)  
+    * Use new `Utils::getSupportedPageTypes()` to enforce `html,htm` at the front of the list [#2531](https://github.com/getgrav/grav/issues/2531)
     * Updated vendor libraries
     * Markdown filter is now page-aware so that it works with modular references [admin#1731](https://github.com/getgrav/grav-plugin-admin/issues/1731)
     * Check of `GRAV_USER_INSTANCE` constant is already defined [#2621](https://github.com/getgrav/grav/pull/2621)
@@ -26,7 +89,7 @@
     * Fixed `FlexObject::exists()` failing sometimes just after the object has been saved
     * Fixed CSV formatter not encoding strings with `"` and `,` properly
     * Fixed var order in `Validation.php` [#2610](https://github.com/getgrav/grav/issues/2610)
-    
+
 # v1.6.11
 ## 06/21/2019
 
@@ -57,7 +120,7 @@
     * Fixed regression with `bin/plugin` not listing the plugins available (1c725c0)
     * Fixed bitwise operator in `TwigExtension::exifFunc()` [#2518](https://github.com/getgrav/grav/issues/2518)
     * Fixed issue with lang prefix incorrectly identifying as admin [#2511](https://github.com/getgrav/grav/issues/2511)
-    * Fixed issue with `U0ils::pathPrefixedBYLanguageCode()` and trailing slash [#2510](https://github.com/getgrav/grav/issues/2511) 
+    * Fixed issue with `U0ils::pathPrefixedBYLanguageCode()` and trailing slash [#2510](https://github.com/getgrav/grav/issues/2511)
     * Fixed regresssion issue of `Utils::Url()` not returning `false` on failure. Added new optional `fail_gracefully` 3rd attribute to return string that caused failure [#2524](https://github.com/getgrav/grav/issues/2524)
 
 # v1.6.9
